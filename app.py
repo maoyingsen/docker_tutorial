@@ -4,7 +4,7 @@ from flask import Response
  
 DEBUG = True
 PORT = 8000
-HOST = '127.0.0.1'
+HOST = '0.0.0.0'
 
 app = Flask(__name__)
  

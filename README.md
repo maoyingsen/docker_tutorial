@@ -153,6 +153,15 @@ docker inspect container_id
         }
     ],
 ```
+
+实战
+--
+在当前文件夹下运行```docker build . -t test-flask```，然后运行```docker images```
+![image](docker_7.png)
+使用```docker run -d -p 8000:8000 test-flask```运行容器
+![image](docker_8.png)
+用本地```curl 127.0.0.1:8000/hello```和公网IP进行访问都可看到响应（需要使用```docker attach container_id```查看）
+![image](docker_9.png)
 ## Reference
 1. https://hackernoon.com/docker-tutorial-getting-started-with-python-redis-and-nginx-81a9d740d091
 2. https://stackoverflow.com/questions/21553353/what-is-the-difference-between-cmd-and-entrypoint-in-a-dockerfile
